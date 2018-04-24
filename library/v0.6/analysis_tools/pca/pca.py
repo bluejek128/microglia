@@ -62,7 +62,7 @@ def run(dataset, normalization='logCPM', nr_genes=2500, z_score=True, color_by='
 				elif gsm in group_dict['B']:
 					col.append(B_label)
 				else:
-					col.append('Other')
+					col.append('14 Days Post Tumor Injection')
 			dataset['sample_metadata']['Sample Group'] = col
 			color_by = 'Sample Group'
 		else:
@@ -135,7 +135,7 @@ def plot(pca_results, plot_counter):
 				elif category == group_B:
 					category_color = 'red'
 				else:
-					category_color = 'black'
+					category_color = 'green'
 			else:
 				category_color = colors[i]
 
