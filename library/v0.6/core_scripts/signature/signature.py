@@ -22,7 +22,7 @@ r.source(os.path.join(os.path.dirname(os.path.realpath(__file__)), 'signature.R'
 #######################################################
 #######################################################
 
-def make_design_matrix(expression_dataframe, group_A, group_B, data):
+def make_design_matrix(expression_dataframe, group_A, group_B, data='subset'):
 
 	# Sample names
 	group_A = [x.replace(':', '.').replace('-', '.') for x in group_A]
@@ -62,7 +62,7 @@ def limma(dataset, group_A, group_B, data='subset'):
 ########## 2. CD
 #############################################
 
-def cd(dataset, group_A, group_B, normalization='rawdata', log=False):
+def cd(dataset, group_A, group_B, normalization='rawdata', log=False, data='subset'):
 
 	# Get design
 	processed_data = make_design_matrix(dataset[normalization].copy(), group_A, group_B)

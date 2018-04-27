@@ -235,7 +235,7 @@ limma <- function(rawcount_dataframe, design_dataframe, adjust="BH") {
 	list(T=T,P=P,pcvar=pcvar)
 }
 
-cd <- function(expression_dataframe, design_dataframe, log, constant_threshold=1e-5) {
+cd <- function(expression_dataframe, design_dataframe, log, constant_threshold=1) {
 
 	# Log-transform
 	if (log) {

@@ -62,7 +62,7 @@ def run(dataset, normalization='logCPM', nr_genes=2500, z_score=True, color_by='
 				elif gsm in group_dict['B']:
 					col.append(B_label)
 				else:
-					col.append('14 Days Post Tumor Injection')
+					col.append('AD Clec7a-')
 			dataset['sample_metadata']['Sample Group'] = col
 			color_by = 'Sample Group'
 		else:
